@@ -1,5 +1,5 @@
 import pandas as pd
-
+from analyze import get_tokens
 
 def e():
     exit(1)
@@ -46,7 +46,7 @@ def main():
     print(data_frame)
     terminals = ['!']
     adding_terminals(data_frame, terminals)
-    string = ['(', 'int', '+', 'int', ')', "*", '(', 'int', '*', 'int', ')']
+    string = get_tokens()
     index = 0
     stack = ['S']
 
